@@ -5,6 +5,10 @@ public class CarController : MonoBehaviour
 {
     public DeliveryManager deliveryManager;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip collisionSound;
+
     float acceleration = 5f;
     float deceleration = 5f;
     float maxSpeed = 6f;
@@ -38,6 +42,13 @@ public class CarController : MonoBehaviour
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<SolidObstacle>() != null)
+            if (audioSource != null && collisionSound != null)
+                audioSource.PlayOneShot(collisionSound);
     }
 
     void OnTriggerEnter2D(Collider2D other)

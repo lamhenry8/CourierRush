@@ -13,7 +13,7 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject oilSpillPrefab;
 
     [Header("Settings")]
-    public int solidObstaclesPerChunk = 2;
+    public int solidObstaclesPerChunk = 1;
     public int oilSpillsPerChunk = 1;
     public string roadTilemapName = "Road";
     public float minDistanceBetweenObstacles = 1.5f;

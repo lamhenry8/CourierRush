@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 543950547906354333}
   - component: {fileID: 1175655485184351128}
   - component: {fileID: 4019810697937824856}
-  - component: {fileID: 4360582676669022468}
+  - component: {fileID: 6179661250597156745}
   m_Layer: 0
   m_Name: Oil
   m_TagString: Untagged
@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5518870a293a87c42a678447ee70f187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OilSpill
---- !u!58 &4360582676669022468
-CircleCollider2D:
+--- !u!68 &6179661250597156745
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -140,4 +140,11 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.45416668
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.45416668, y: 0}
+  - {x: 0.45416668, y: 0}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
